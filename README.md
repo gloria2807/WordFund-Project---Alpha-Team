@@ -1,2 +1,2 @@
 # WordFund-Project---Alpha-Team
-A responsive venture studio website made using HTML, CSS and JavaScript 
+A team project creating a responsive venture studio website using HTML and CSS 

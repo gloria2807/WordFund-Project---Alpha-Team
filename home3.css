@@ -473,7 +473,7 @@ color:black;
         width:20%;
     }
    .slider {
-        width: 300px;
+        max-width: fit-content;
     }
     .slides {
        overflow-x: scroll;

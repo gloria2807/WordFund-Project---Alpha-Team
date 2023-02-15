@@ -472,17 +472,19 @@ color:black;
         height: 90px;
         width:20%;
     }
-    .slider {
+   .slider {
         width: 300px;
     }
     .slides {
-       overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
+       width: 300px;
+       overflow-x: scroll;
+       scroll-snap-type: x mandatory;
+       scroll-behavior: smooth;
+       -webkit-overflow-scrolling: touch;
       }
       .slides > div{
         width:300px;
+	    scroll-snap-align: start;
       }
       .menu-apply-here-div, .menu-items{
         display:none;

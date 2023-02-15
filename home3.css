@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 html,body{
     margin:0;
 }
@@ -19,6 +22,7 @@ html,body{
     padding-left: 4%;
     padding-right:4%;
     padding-top:2%;
+    align-items: center;
 }
 .section-slider{
     background-color: #fff7b4;
@@ -34,23 +38,46 @@ html,body{
     background-image: url(images/Product-design1800x1200-1-768x512a.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    margin: 20px auto;
+    transition: 500ms linear; 
+}
+#slide-1:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
 }
 #slide-2{
     background-image: url(images/startup-advisory.jpg); 
     background-size:cover;
     background-repeat: no-repeat;
+    margin: 20px auto;
+    transition: 500ms linear; 
+}
+#slide-2:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
 }
 #slide-3{
     background-image: url(images/Venture-capital\ .jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    margin: 20px auto;
+    transition: 500ms linear; 
+}
+#slide-3:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
 }
 #slide-4{
     background-image: url(images/Merger768x512a.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    margin: 20px auto;
+    transition: 500ms linear; 
 }
-
+#slide-4:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
+}
 
 .what-we-do{
     margin-left:8%;
@@ -58,10 +85,23 @@ html,body{
 .menu-items{
     display:flex;
     gap:20px;
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
 }
 .menu-items a{
     color: black;
     text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+}
+.menu-items a:hover{
+    color: orange;
+    background-color: white;
 }
 .menu-items a:active{
     font-weight: bold;
@@ -130,6 +170,7 @@ html,body{
 .section-head-start{
     background-color: #fffdf6;
 }
+
 .keep-touch{
     margin-top: 35px;
     margin-bottom: 20px;
@@ -208,6 +249,10 @@ footer a{
     text-decoration: none;
     color:white;
     margin-bottom: 20px;
+}
+footer a:hover{
+    color: yellow;
+    background-color:#514742;
 }
 footer p a{
     display:inline-block;
@@ -321,7 +366,15 @@ footer div{
     background-color: #fff7b4;
     width:100%;
     height:100vh;
+    left: 0;
+    padding: 14px 16px;
+    font: inherit;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
+.show {display: block;}
 
 .dd-close-btn{
     font-size: x-large;
@@ -388,7 +441,7 @@ color:black;
 
 
 
-@media screen and (max-width: 416px) {
+@media screen and (max-width:416px) {
     .section-head-start, .keep-touch{
         flex-wrap: wrap;
     }

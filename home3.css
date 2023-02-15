@@ -281,7 +281,7 @@ footer div{
   }
   
   .slides {
-     
+    display: flex;
     gap: 25px;
     justify-content: center;
     /*overflow-x: auto;
@@ -311,7 +311,7 @@ footer div{
     transform: scale(1);
     transition: transform 0.5s;
     position: relative;
-    
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     object-fit: none;
@@ -476,7 +476,6 @@ color:black;
         width: 300px;
     }
     .slides {
-       width: 300px;
        overflow-x: scroll;
        scroll-snap-type: x mandatory;
        scroll-behavior: smooth;
@@ -484,8 +483,12 @@ color:black;
       }
       .slides > div{
         width:300px;
-	    scroll-snap-align: start;
+	scroll-snap-align: start;
       }
+      .slider img {
+   	 object-fit: cover;
+   	 position: absolute;
+	}
       .menu-apply-here-div, .menu-items{
         display:none;
       }

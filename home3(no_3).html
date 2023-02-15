@@ -13,15 +13,23 @@
 <div class="main">    
  <nav class="nav">
       <span class="wff-icon">
+        <a href="#word">
         <img src="images/bulb.jpeg" alt="creative ideas" width="40">
-            <b style = font-size:30px>Word Family Fund</b>
+            <b style = font-size:30px;color:black>Word Family Fund</b>
+        </a>
       </span>
       <span class="menu-items">
-        <a href=""><strong>Home</strong></a>
+        <a href="#home"><strong>Home</strong></a>
+        &ensp;
             <a href="">Venture Studio</a> 
+            &ensp;
             <a href="">Fund</a>
+            &ensp;
             <a href="">Portfolio</a>
+            &ensp;
             <a href="">Team</a>
+            &emsp;
+            &ensp;
       </span>
       <span class="menu-apply-here-div">
         <a href='https://forms.gle/JdZoMA7hnmBQA5qp8'>
@@ -30,14 +38,45 @@
         </a>
     </span>
     <span class="dropdown-btn-span">
-        <button class="dropdown-btn">&equals;</button>
+        <button onclick="myFunction()" class="dropdown-btn">&equals;</button>
+        <div id="mydropdown" class="dropdown-menu-page">
+            <div class="dd-head">
+                <span class="wff-icon">
+                    <img src="images/bulb.jpeg" alt="creative ideas" width="40">
+                    <b style = font-size:30px>Word Family Fund</b>
+                  </span>
+                  <span class="dd-close-span">
+                    <a href="">
+                    <button class="dd-close-btn">&times;</button>
+                </a>
+                  </span>
+                </div>
+                <span class="dd-menu-items">
+                    <a href=""><strong>Home</strong></a>
+                        <a href="">Venture Studio</a> 
+                        <a href="">Fund</a>
+                        <a href="">Portfolio</a>
+                        <a href="">Team</a>
+                  </span>
+                <a href="https://forms.gle/JdZoMA7hnmBQA5qp8">
+                  <div class="dd-btn-div">
+                  <button  value="Apply Here" class="dd-menu-apply-here-btn">Apply Here
+                  </button>
+                </a>
+                </div>
+                <p class="dd-socials">
+                    <a href="" class="twitter"> <img src="images/Twitter 2.jpeg" alt="Twitter" width="15"></a>
+                    <a href="" class="face"> <img src="images/Facebook 2.jpeg" alt="Facebook" width="15"></a>
+                    <a href="" class="insta"> <img src="images/Insta 2.jpeg" alt="Instagram" width="15"></a> 
+                </p> 
+                </div>
     </span>
     </nav>
 
       
     <br>
     
-    <div class="section-head-start">
+    <div class="section-head-start" id="home">
         <section class="section1">
             <p class="give-head-start">Give your Tech Idea an <strong>Head Start</strong> </p>
             <p class="faint-text">
@@ -91,7 +130,7 @@
     <br>
     <br>
     <br>
-    <div class="about-wff">
+    <div class="about-wff" id="word">
         <section class="img-about-wff">
             <img src="images/About WFF.jpg" alt="Google" width="100%">
         </section>
@@ -133,16 +172,29 @@
         </section>
 
         <section class="form-keep-touch">
-             <form action="action.php" target="_blank">
-                    <input type="text" id="human" name="human" placeholder="Full name" class="email-box"><br><br>
-                    <input type="email" id="human" name="human" placeholder="email address" class="email-box"><br><br>
-                    <input type="text" id="figure" name="numerals" placeholder="phone number" class="email-box"><br><br>
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="Type your message here" class="textarea-box"></textarea><br><br>
-                    <button type="submit" value="Submit" class="submit-btn">Submit
-                    </button>
-            </form>  
+            <div class="col-md-12">
+                <form method="post" autocomplete="off" name="google-sheet">
+                    <div class="form-group"><input type="text" id="human" name="human" placeholder="Full name" class="email-box"><br><br></div>
+                    <div class="form-group"><input type="email" id="human" name="human" placeholder="email address" class="email-box"><br><br></div>
+                    <div class="form-group"><input type="text" id="figure" name="numerals" placeholder="phone number" class="email-box"><br><br></div>
+                    <div class="form-group"><textarea name="message" id="" cols="30" rows="10" placeholder="Type your message here" class="textarea-box"></textarea><br><br></div>
+                    <div class="form-group"><button type="submit" value="Submit" class="submit-btn">Submit</button></div>
+            </form> 
+		<span id="msg"></span>
+        </div> 
         </section>
-
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxAdZm0T6Z5xSdrMDW7SWGWybz86Js39Fe03P2Frck6jcG2Q8zgGlo1JDxJSMLgDfx5tg/exec'
+            const form = document.forms['google-sheet']
+	        const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us! We Will Contact You Soon"))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     </div>
     <div class="news">
             <h1 class="join-news">Join Our Newsletter</h1>
@@ -151,10 +203,13 @@
             </p>
             
           <section class="section-news-submit">
+	   <form method="post" autocomplete="off" name="google-sheet">
             <input type="email" id="human" name="human" placeholder="Enter a valid email address" class="email-box-2" />
             
             <button type="submit" value="Submit" class="submit-btn">Submit
             </button>
+	   </form>
+	  <span id = "msg2"></span>
         </section>
     </div>
     <footer>
@@ -208,5 +263,6 @@
         <a href="" class="insta"> <img src="images/Insta.jpeg" alt="Instagram" width="15"></a> 
     </p> 
     </div>
+    
 </body>
 </html>

@@ -35,18 +35,18 @@ html,body{
     text-align: end;
 }
 #slide-1{
-    background-image: url(images/Product-design1800x1200-1-768x512a.jpg);
+    background-image: url(images/Product\ building.png);
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
-    transition: 500ms linear; 
+    transition: 500ms linear;
 }
 #slide-1:hover{
     opacity: 0.5;
     transform: scale(1.1);
 }
 #slide-2{
-    background-image: url(images/startup-advisory.jpg); 
+    background-image: url(images/Startup\ advisory.png); 
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -57,7 +57,7 @@ html,body{
     transform: scale(1.1);
 }
 #slide-3{
-    background-image: url(images/Venture-capital\ .jpg);
+    background-image: url(images/Venture\ capital.png);
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -68,7 +68,7 @@ html,body{
     transform: scale(1.1);
 }
 #slide-4{
-    background-image: url(images/Merger768x512a.jpg);
+    background-image: url(images/Merger.png);
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -215,8 +215,8 @@ html,body{
   }
 
 .images-banner img{
-    width:15%;
-    height:120px;
+    width:20%;
+    height:80px;
 }
 
 .section-news-submit{
@@ -283,8 +283,8 @@ footer div{
   .slides {
     display: flex;
     gap: 25px;
-    justify-content: center;
-    /*overflow-x: auto;
+    /*justify-content: center;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;*/

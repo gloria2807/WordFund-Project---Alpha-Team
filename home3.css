@@ -1,13 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+*{
+    font-family: Montserrat;
+}
+
 html{
     scroll-behavior: smooth;
 }
 html,body{
     margin:0;
-    font-family: "Montserrat";
 }
 .give-head-start, .about-wff h1, .what-we-do, .p-about-wff {
     color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: xx-large; 
 }
 .emp {
@@ -36,18 +40,18 @@ html,body{
     text-align: end;
 }
 #slide-1{
-    background-image: url(images/productttttbuilding.png);
+    background-image: url(images/Product\ building.png);
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
-    transition: 500ms linear; 
+    transition: 500ms linear;
 }
 #slide-1:hover{
     opacity: 0.5;
     transform: scale(1.1);
 }
 #slide-2{
-    background-image: url(images/startuppppadvisory.png); 
+    background-image: url(images/Startup\ advisory.png); 
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -58,7 +62,7 @@ html,body{
     transform: scale(1.1);
 }
 #slide-3{
-    background-image: url(images/ventureeecapital.png);
+    background-image: url(images/Venture\ capital.png);
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -69,7 +73,7 @@ html,body{
     transform: scale(1.1);
 }
 #slide-4{
-    background-image: url(images/mergerrrracquisition.png);
+    background-image: url(images/Merger.png);
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -87,7 +91,7 @@ html,body{
     display:flex;
     gap:20px;
     list-style: none;
-    font-family: "Open Sans", sans-serif;
+    
     font-weight: 600;
 }
 .menu-items a{
@@ -95,7 +99,7 @@ html,body{
     text-decoration: none;
     list-style: none;
     font-weight: 600;
-    font-family: "Open Sans", sans-serif;
+    
     font-size: 16px;
     display: inline-block;
     position: relative;
@@ -282,7 +286,7 @@ footer div{
   }
   
   .slides {
-    display: flex; 
+    display: flex;
     gap: 25px;
     /*justify-content: center;
     overflow-x: auto;
@@ -473,7 +477,7 @@ color:black;
         height: 90px;
         width:20%;
     }
-    .slider {
+   .slider {
         max-width: fit-content;
     }
     .slides {

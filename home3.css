@@ -3,6 +3,7 @@ html{
 }
 html,body{
     margin:0;
+    font-family: "Montserrat";
 }
 .give-head-start, .about-wff h1, .what-we-do, .p-about-wff {
     color: black;
@@ -46,7 +47,7 @@ html,body{
     transform: scale(1.1);
 }
 #slide-2{
-    background-image: url(images/startup-advisory.jpg); 
+    background-image: url(images/pexels-canva-studio-3153198 1.png); 
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -57,7 +58,7 @@ html,body{
     transform: scale(1.1);
 }
 #slide-3{
-    background-image: url(images/Venture-capital\ .jpg);
+    background-image: url(images/pexels-fauxels-3182773 1.png);
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;
@@ -68,7 +69,7 @@ html,body{
     transform: scale(1.1);
 }
 #slide-4{
-    background-image: url(images/Merger768x512a.jpg);
+    background-image: url(images/pexels-olia-danilevich-5313173 1.png);
     background-size:cover;
     background-repeat: no-repeat;
     margin: 20px auto;

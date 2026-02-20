@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
 
 *{
     font-family: Montserrat;
@@ -8,11 +8,10 @@ html{
 }
 html,body{
     margin:0;
-    
+  padding: 0;
 }
 .give-head-start, .about-wff h1, .what-we-do, .p-about-wff {
     color: black;
-    
     font-size: xx-large; 
 }
 .emp {
@@ -22,14 +21,26 @@ html,body{
 .margin-left-5{
     margin-left:5%;
 }
-.nav{
-    display:flex;
-    justify-content: space-between;
-    padding-left: 4%;
-    padding-right:4%;
-    padding-top:2%;
+
+.nav .items{
+    display: flex;
     align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
 }
+.menu-items {
+  display: flex;
+  gap: 25px;
+}
+
+.menu-apply-here-div {
+  margin-left: 20px;
+}
+
+.dropdown-btn-span {
+  display: none;
+}
+
 .section-slider{
     background-color: #fff7b4;
     padding-top:15px;
@@ -88,19 +99,22 @@ html,body{
 .what-we-do{
     margin-left:8%;
 }
-.menu-items{
+.what-we-do, .slider{
+    margin-left:30px;
+    margin-right: 30px;
+}
+/*.menu-items{
     display:flex;
     gap:20px;
     list-style: none;
     
     font-weight: 600;
-}
+}*/
 .menu-items a{
     color: black;
     text-decoration: none;
     list-style: none;
     font-weight: 600;
-    
     font-size: 16px;
     display: inline-block;
     position: relative;
@@ -141,7 +155,6 @@ html,body{
     margin-top:35px;
     border:none;
     border-radius: 20px;
-    
     font-weight: bold;
 }
 .menu-apply-here-btn{
@@ -160,7 +173,6 @@ html,body{
     background-color: black;
     color:white;
 }
-
 .submit-btn{
     background-color: #FFC107;
     color: #efefef;
@@ -170,7 +182,6 @@ html,body{
     padding-top:10px;
     border:none;
     border-radius: 20px;
-    
     font-weight: bold;
 }
 .section-head-start{
@@ -210,9 +221,7 @@ html,body{
     padding-bottom: 20px;
 }
 
-.dropdown-btn-span{
-    display:none;
-}
+
 .dropdown-btn-span button{
     font-size: larger;
     background-color: white;
@@ -235,6 +244,7 @@ html,body{
 .email-box-2{
     width:100%;
     margin-right:35px;
+    margin-bottom: 20px;
     height:45px;
     border:2px solid #efefef;
     border-radius: 25px;
@@ -272,10 +282,6 @@ footer{
 footer div{
     margin-right:10%;
 }
-
-
-
-
 * {
     box-sizing: border-box;
   }
@@ -364,9 +370,6 @@ footer div{
   .slider > a:focus {
     background: #000;
   }
-  
-
-
 .dropdown-menu-page{
     display:none;
     background-color: #fff7b4;
@@ -421,6 +424,7 @@ color:black;
     padding-top:15px;
     margin-bottom:30px;
 }
+.form 
 
   @supports (scroll-snap-type) {
     .slider > a {
@@ -440,14 +444,8 @@ color:black;
     font-family: 'Ropa Sans', sans-serif;
   }*/
 
+@media screen and (max-width: 416px) {
 
-
-
-
-
-
-
-@media screen and (max-width:416px) {
     .section-head-start, .keep-touch{
         flex-wrap: wrap;
     }
@@ -496,10 +494,143 @@ color:black;
    	 object-fit: cover;
    	 position: absolute;
 	}
-      .menu-apply-here-div, .menu-items{
-        display:none;
-      }
-      .dropdown-btn-span{
-        display:block;
-      }
+       .menu-items,
+  .menu-apply-here-div {
+    display: none;
+  }
+
+  .dropdown-btn-span {
+    display: block;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+  .what-we-do .slider{
+    margin-left: 120px;
+  }
 }
+
+@media screen and (max-width:1024px) {
+
+    .section-head-start,
+    .about-wff,
+    .keep-touch {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section1,
+    .img-section1,
+    .section-about-wff,
+    .img-about-wff,
+    .section-keep-touch,
+    .form-keep-touch {
+        width: 100%;
+        margin: 0;
+    }
+
+    .images-banner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .images-banner img {
+        width: 30%;
+        height: auto;
+    }
+
+    .slides > div {
+        width: 45%;
+        height: 250px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-items {
+        display: none;
+    }
+
+    .menu-apply-here-div {
+        display: none;
+    }
+
+
+    .slides {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .slides > div {
+        width: 70%;
+        height: 220px;
+    }
+
+    .images-banner img {
+        width: 45%;
+    }
+
+    .section-news-submit {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .email-box-2 {
+        margin-right: 0;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer div {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .slides > div {
+        width: 85%;
+        height: 200px;
+    }
+
+    .images-banner img {
+        width: 80%;
+    }
+
+    .news {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .email-box,
+    .textarea-box,
+    .email-box-2 {
+        width: 100%;
+    }
+
+    .give-head-start,
+    .about-wff h1,
+    .what-we-do,
+    .p-about-wff {
+        font-size: 22px;
+    }
+}
+
+
+
